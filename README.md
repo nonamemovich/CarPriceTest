@@ -1,2 +1,1 @@
-@ base_webpack_react
-@ base_webpack_react
+открыть dlist/index.html в браузере
