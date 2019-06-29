@@ -83,7 +83,7 @@ class CreateForm extends Component {
                     </div>
                 </div>
                 <div className="form-group">
-                    <label className="">Добавить пункт(ы)<span onClick={ e=>{ this.addAttribut(e) }}>+</span></label>
+                    <button type="button" className="btn btn-outline-secondary" onClick={ e=>{ this.addAttribut(e) }}>Добавить пункт +</button>
                     {attributsEl}
                 </div>
                 <div className="form-group">
@@ -95,7 +95,8 @@ class CreateForm extends Component {
                         обязательно к заполнению 
                     </div>
                 </div>
-                <button type="button" className="btn btn-primary" onClick={ e=> { this.onAddObjectt(e) } }>Добавить объект</button>
+                <button type="button" className="btn btn-outline-primary mr-3" onClick={ e=> { this.onAddObjectt(e) } }>Добавить объект</button>
+                <button type="button" className="btn btn-outline-success" onClick={ e=> { this.props.changeShowComponent() } }>Отмена</button>
             </form>
         )
     }

@@ -19,7 +19,7 @@ class App extends Component {
         let ShowComponent
         
         if (state.ShowForm==ShowCONST.CreateFrom) {
-            ShowComponent = <CreateForm onAddObjectt={this.props.onAddObjectt}/>
+                ShowComponent = <CreateForm onAddObjectt={this.props.onAddObjectt} changeShowComponent={this.props.changeShowComponent.bind(this, ShowCONST.List)}/>
         } else if (state.ShowComponent==ShowCONST.Cards){
             ShowComponent = <Cards />
         } else {

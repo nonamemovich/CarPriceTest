@@ -12,7 +12,8 @@ var store = createStore((state = initialState, action)=>{
     switch (action.type) {
         case 'SHOW_COMPONENT':
             return Object.assign({}, state, {
-                ShowComponent: action.payload
+                ShowComponent: action.payload,
+                ShowForm: null
             })
         case 'SHOW_FROM':
             return Object.assign({}, state, {
