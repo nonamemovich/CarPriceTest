@@ -5,8 +5,10 @@ import style from './style.css'
 import store from '../store/index'
 
 const Buttons=function(props) {
-    let List = store.getState().Objects
+    let List = store.getState().Objects || []
     let onRecalcObjects = function (type) {
+        if (!List.length || List.length==0) return
+        
         if (type=="addToEnd") {
             let NewList = List.slice()
             let firstObject = NewList.splice(0,1)
